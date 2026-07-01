@@ -1,9 +1,16 @@
 // Navigation Logic
 function nextPage(currentPage) {
-    // Play music on first interaction
+    // Play music on first interaction safely
     const audio = document.getElementById('bg-music');
     if (audio && audio.paused) {
-        audio.play().catch(e => console.log("Audio play prevented", e));
+        try {
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(e => console.log("Audio play prevented", e));
+            }
+        } catch (err) {
+            console.log("Audio error", err);
+        }
     }
     
     const current = document.getElementById(`page-${currentPage}`);
