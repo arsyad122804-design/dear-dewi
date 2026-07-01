@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Dewi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <main class="container">
+        <!-- Page 1: Introduction -->
+        <section class="page active" id="page-1">
+            <div class="glass-card">
+                <div class="page-number">01</div>
+                <h1>Teruntuk Kesayanganku, Dewi,</h1>
+                <p>Delapan bulan sudah kita merajut cerita bersama. Waktu terasa berjalan begitu cepat saat aku bersamamu, namun setiap detiknya terukir indah dalam ingatanku. Surat ini kutulis untuk merayakan perjalanan cinta kita.</p>
+                <button class="next-btn" onclick="nextPage(1)">Buka Lembar Selanjutnya <span class="arrow">→</span></button>
+            </div>
+        </section>
+
+        <!-- Page 2: Admiration -->
+        <section class="page" id="page-2">
+            <div class="glass-card">
+                <div class="page-number">02</div>
+                <h2>Delapan Bulan yang Indah</h2>
+                <p>Sejak hari pertama kamu resmi menjadi milikku, duniaku dipenuhi warna-warni yang tak pernah kubayangkan sebelumnya. Kamu bukan hanya pasanganku, tapi juga tempatku pulang. Senyum dan pelukanmu selalu berhasil menyembuhkan segala lelahku.</p>
+                <div class="button-group">
+                    <button class="prev-btn" onclick="prevPage(2)"><span class="arrow">←</span> Sebelumnya</button>
+                    <button class="next-btn" onclick="nextPage(2)">Lanjut Membaca <span class="arrow">→</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 3: Specifics/Memories -->
+        <section class="page" id="page-3">
+            <div class="glass-card">
+                <div class="page-number">03</div>
+                <h2>Setiap Detail Tentangmu</h2>
+                <p>Selama 8 bulan ini, aku semakin mengenal dan mencintai setiap detail dari dirimu. Caramu menatapku, caramu tertawa lepas, dan caramu menggenggam tanganku. Kekurangan dan kelebihanmu justru membuatku semakin jatuh cinta padamu setiap harinya.</p>
+                <div class="button-group">
+                    <button class="prev-btn" onclick="prevPage(3)"><span class="arrow">←</span> Sebelumnya</button>
+                    <button class="next-btn" onclick="nextPage(3)">Lanjut Membaca <span class="arrow">→</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 4: The Promise -->
+        <section class="page" id="page-4">
+            <div class="glass-card">
+                <div class="page-number">04</div>
+                <h2>Masa Depan Kita</h2>
+                <p>Delapan bulan ini barulah permulaan dari babak panjang yang sedang kita tulis berdua. Harapanku tidak pernah berubah; aku ingin terus menggenggam tanganmu, melewati suka dan duka bersama, hingga waktu yang tak terhingga.</p>
+                <div class="button-group">
+                    <button class="prev-btn" onclick="prevPage(4)"><span class="arrow">←</span> Sebelumnya</button>
+                    <button class="next-btn" onclick="nextPage(4)">Lembar Terakhir <span class="arrow">→</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 5: Conclusion -->
+        <section class="page" id="page-5">
+            <div class="glass-card">
+                <div class="page-number">05</div>
+                <h2>Aku Mencintaimu</h2>
+                <p>Dewi, terima kasih sudah bertahan dan selalu menyayangiku selama 8 bulan ini. Aku sangat mencintaimu, lebih dari apa pun yang bisa diungkapkan oleh kata-kata. Selamat merayakan hari jadi kita yang ke-8 bulan, Sayangku.</p>
+                <p class="signature">Selalu milikmu,<br><strong>Kekasihmu</strong></p>
+                <div class="button-group">
+                    <button class="prev-btn" onclick="prevPage(5)"><span class="arrow">←</span> Sebelumnya</button>
+                    <button class="next-btn" onclick="nextPage(5)">Satu Lagi <span class="arrow">→</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 6: The Song -->
+        <section class="page" id="page-6">
+            <div class="glass-card" style="text-align: center;">
+                <div class="page-number">06</div>
+                <h2>Dengerin lagunya sampai selesai... 🎶</h2>
+                <div class="music-animation">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="button-group" style="justify-content: center; margin-top: 3rem;">
+                    <button class="next-btn restart-btn" onclick="restart()">Mulai Dari Awal <span class="arrow">↺</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <audio id="bg-music" src="Dewi, Teman Hidupku.mp3" loop preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
